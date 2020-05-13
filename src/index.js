@@ -35,6 +35,7 @@ class Form extends React.Component {
       this.setState({ submitted: true });
       setTimeout(() => {
         this.setState({ showThanks: true });
+        localStorage.setItem("submitted", "true");
       }, 2000);
     }
   };
@@ -55,7 +56,8 @@ class Form extends React.Component {
         <h1 className="form-title">INTERNSHIP SIGNUP FORM</h1>
         <div className="line"></div>
 
-        {this.state.showThanks ? (
+        {this.state.showThanks ||
+        localStorage.getItem("submitted") === "true" ? (
           <div className="thanks-pg">
             <h2 className="thanks-title">Thanks for your interest!</h2>
             <p className="thanks-msg">
