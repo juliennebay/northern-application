@@ -110,7 +110,7 @@ class Form extends React.Component {
               </select>
             </div>
           </div>
-          <button onClick={this.submitForm} className-="signup">
+          <button onClick={this.submitForm}>
             {this.state.loading ? "Submitting..." : "Sign Up Now ▸"}
           </button>
         </div>
