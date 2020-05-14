@@ -1,3 +1,23 @@
+View this app here: https://juliennebay.github.io/northern-application/
+
+### Tech Stack
+
+This is a purely front-end app using React. It was bootstrapped using create react app.
+
+#### Local storage
+
+Information about submit is stored in local storage, which creates some security issues, but it was done this way for the purpose of this assignment. 
+
+Another design decision I made is to have a simple `submitted` key in localstorage to indicate if the form has been submitted. This design has the issue that it will allow only one submission to be made per browser. The ideal thing woud be to look up submission by email. (Realistically, I would rather do this in a database instead)
+
+### How this is deployed
+
+This app was deployed using the gh-pages package.
+
+
+
+***
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
