@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/northern-application/static/css/main.dcbf116c.chunk.css",
+    "main.js": "/northern-application/static/js/main.6178eee2.chunk.js",
+    "main.js.map": "/northern-application/static/js/main.6178eee2.chunk.js.map",
+    "runtime-main.js": "/northern-application/static/js/runtime-main.ca00560b.js",
+    "runtime-main.js.map": "/northern-application/static/js/runtime-main.ca00560b.js.map",
+    "static/js/2.b52e888a.chunk.js": "/northern-application/static/js/2.b52e888a.chunk.js",
+    "static/js/2.b52e888a.chunk.js.map": "/northern-application/static/js/2.b52e888a.chunk.js.map",
+    "index.html": "/northern-application/index.html",
+    "precache-manifest.706503c572923439e3801c3f2ce0fcb0.js": "/northern-application/precache-manifest.706503c572923439e3801c3f2ce0fcb0.js",
+    "service-worker.js": "/northern-application/service-worker.js",
+    "static/css/main.dcbf116c.chunk.css.map": "/northern-application/static/css/main.dcbf116c.chunk.css.map",
+    "static/js/2.b52e888a.chunk.js.LICENSE.txt": "/northern-application/static/js/2.b52e888a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ca00560b.js",
+    "static/js/2.b52e888a.chunk.js",
+    "static/css/main.dcbf116c.chunk.css",
+    "static/js/main.6178eee2.chunk.js"
+  ]
+}
