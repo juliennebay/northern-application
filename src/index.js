@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 const INTERESTS = [
-  "Your interests",
+  "Your interests (value must be selected)",
   "Development",
   "Product",
   "Marketing",
@@ -37,7 +37,7 @@ class Form extends React.Component {
   };
 
   submitForm = () => {
-    if (this.isEmailInvalid()) {
+    if (this.isEmailInvalid() || this.state.interest.length === 0) {
       this.setState({ submitError: true });
     } else {
       console.log(
@@ -77,7 +77,7 @@ class Form extends React.Component {
         <div className="form">
           <div className="input-fields">
             <div>
-              {this.state.submitError ? (
+              {this.state.submitError && this.isEmailInvalid() ? (
                 <p className="error-msg">Check your email</p>
               ) : (
                 ""
@@ -85,21 +85,30 @@ class Form extends React.Component {
               <input
                 type="text"
                 className={`email-input ${
-                  this.state.submitError ? "error-input" : ""
+                  this.state.submitError && this.isEmailInvalid()
+                    ? "error-input"
+                    : ""
                 }`}
                 placeholder="Your Email Address*"
                 onChange={this.updateEmail}
               />
             </div>
-            <select
-              className="dropdown"
-              required
-              onChange={this.updateInterest}
-            >
-              {INTERESTS.map((interest, i) => (
-                <option value={i !== 0 ? interest : ""}>{interest}</option>
-              ))}
-            </select>
+            <div>
+              {this.state.interest.length === 0 && this.state.submitError ? (
+                <p className="error-msg">Value must be selected</p>
+              ) : (
+                ""
+              )}
+              <select
+                className="dropdown"
+                required
+                onChange={this.updateInterest}
+              >
+                {INTERESTS.map((interest, i) => (
+                  <option value={i !== 0 ? interest : ""}>{interest}</option>
+                ))}
+              </select>
+            </div>
           </div>
           <button onClick={this.submitForm} className-="signup">
             {this.state.loading ? "Submitting..." : "Sign Up Now ▸"}
